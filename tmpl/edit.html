@@ -1,0 +1,17 @@
+{{define "content"}}
+<section>
+	<header class="main">
+			<h1>Editing {{.Title}}</h1>
+	</header>
+	<form action="/save/{{.Title}}" method="POST">
+		<div class="row uniform">
+				<div class="12u$"><textarea name="body" rows="20">{{printf "%s" .Body}}</textarea></div>
+				<div class="12u$">
+						<ul class="actions">
+							<li><input class="special" type="submit" value="Save"></li>
+						</ul>
+				</div>
+		</div>
+	</form>
+</section>
+{{end}}
